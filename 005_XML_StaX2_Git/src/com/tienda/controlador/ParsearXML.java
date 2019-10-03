@@ -22,6 +22,7 @@ public class ParsearXML {
     static final String NOMBRE = "nombre";
     static final String TELEFONO = "telefono";
     static final String COMENTARIOS = "comentarios";
+    static final String ID = "ID";
     @SuppressWarnings({ "unchecked", "null" })
     
     public List<Producto> readConfig(String configFile) {
@@ -47,7 +48,7 @@ public class ParsearXML {
                                 .getAttributes();
                         while (attributes.hasNext()) {
                             Attribute attribute = attributes.next();
-                            if (attribute.getName().toString().equals("ID")) {
+                            if (attribute.getName().toString().equals(ID)) {
                             	producto.setCliente(attribute.getValue());
                             }
                         }
